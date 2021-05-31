@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -10,10 +10,10 @@ function App() {
     <div>
       <BrowserRouter>
         <Header />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/login" component={Login} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login/*" element={<Login />} />
+        </Routes>
         <Footer />
       </BrowserRouter>
     </div>
