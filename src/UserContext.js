@@ -20,6 +20,7 @@ export const UserStorage = ({ children }) => {
           if (!response.ok) throw new Error("Token Inválido");
           await getUser(token);
         } catch (err) {
+          userLogout();
         } finally {
           setLoading(false);
         }
@@ -27,6 +28,14 @@ export const UserStorage = ({ children }) => {
     }
     autoLogin();
   }, []);
+
+  async function userLogout() {
+    setData(null);
+    setError(null);
+    setLoading(false);
+    setLogin(false);
+    window.localStorage.removeItem("token");
+  }
 
   async function getUser(token) {
     const { url, options } = USER_GET(token);
@@ -46,7 +55,7 @@ export const UserStorage = ({ children }) => {
   }
 
   return (
-    <UserContext.Provider value={{ userLogin, data }}>
+    <UserContext.Provider value={{ userLogin, data, userLogout }}>
       {children}
     </UserContext.Provider>
   );
