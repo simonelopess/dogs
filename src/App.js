@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Home from "./Components/Home";
-import Login from "./Components/Login/Login";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Login from "./components/Login/Login";
 import { UserStorage } from "./UserContext";
-import User from "./Components/User/User";
-import ProtectedRoute from "./Components/Helpler/ProtectedRoute";
+import User from "./components/User/User";
+import ProtectedRoute from "./components/Helpler/ProtectedRoute";
 
 function App() {
   return (
