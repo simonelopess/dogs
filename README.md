@@ -21,7 +21,7 @@ Dados serão apagados a cada 10 minutos
 Usuário padrão
 
 ```
-username: cat
-password: cat
+username: dog
+password: dog
 
 ```

@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router";
-import Feed from "../Feed";
+import Feed from "../Feed/Feed";
 import UserHeader from "./UserHeader";
 import UserPhotoPost from "./UserPhotoPost";
 import UserStats from "./UserStats";
